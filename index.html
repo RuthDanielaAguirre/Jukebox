@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Jukebox</title>
+</head>
+<body>
+    
+<section class="reproductor">
+    <img src=""  id= "cancionImg" alt="">
+    <h2 id="tituloCancion">Play Song</h2>
+    <p id="artistaCancion">Artist</p>
+
+    <div class="progress">
+        <span id="tiempoActual">0:00</span>
+        <input type="range" id="progressBar" min="0" max="100" value="0">
+        <span id="tiempoTotal">0:00</span>
+    </div>
+
+    <div class="songC">
+        <button id="btnLast"></button>
+        <button id="btnPause"></button>
+        <button id="btnNext"></button>
+    </div>
+
+    <div id="volume">
+        <span></span>
+        <input type="range" id="sliderVolume" min="0" max="100" value="50">
+    </div>
+
+</section>
+
+<section class="playlist">
+    <h3 class="playlistTitle">Playlist</h3>
+    <div class="buttons-order">
+        <button onclick="orderByTitle()"></button>
+        <button onclick="orderByArtista()"></button>
+    </div>
+
+    <div id="playlistContainer">
+
+    </div>
+</section>
+
+
+<section class="radio">
+    <h3 class="radioListTitle">Radio Stations</h3>
+    <div id="radioContainer">
+
+    </div>
+</section>
+
+<section class="equalizer">
+    <h3 class="equalizerTitle">Equalizer</h3>
+    <canvas id="screen"></canvas>
+    <div class="control-eq">
+        <label>Bass: <span id="bass">0</span></label>
+        <input type="range" id="sliderBass" min="-10" max="10" value="0">
+    </div>    
+    <div class="control-eq">
+        <label>Agudo: <span id="Agudo">0</span></label>
+        <input type="range" id="sliderAgudo" min="-10" max="10" value="0">
+    </div>
+</section>
+
+
+</body>
+</html>
