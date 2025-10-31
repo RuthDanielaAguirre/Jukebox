@@ -34,7 +34,7 @@
 .playlist{
     grid-column: 2;
     grid-row: 1;
-      background: var(--boxes);
+    background: var(--bg);
      border: var(--border);
       border-radius: 1rem;
       backdrop-filter: blur(2rem);
@@ -58,3 +58,6 @@
       backdrop-filter: blur(2rem);
 }
 
+body{
+    background-image: ;
+}
