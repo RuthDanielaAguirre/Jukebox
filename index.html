@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <title>Jukebox</title>
 </head>
 <body>
-    
+   <div class="container">
 <section class="reproductor">
     <img src=""  id= "cancionImg" alt="">
     <h2 id="tituloCancion">Play Song</h2>
@@ -20,14 +23,21 @@
     </div>
 
     <div class="songC">
-        <button id="btnLast"></button>
-        <button id="btnPause"></button>
-        <button id="btnNext"></button>
+        <button id="btnLast">
+            <i class="fa-solid fa-backward"></i>
+        </button>
+        <button id="btnPause">
+            <i class="fa-solid fa-play" id="playPausIcon"></i>
+        </button>
+        <button id="btnNext">
+            <i class="fa-solid fa-forward"></i>
+        </button>
     </div>
 
     <div id="volume">
-        <span></span>
+        <i class="fa-solid fa-volume-high"></i>
         <input type="range" id="sliderVolume" min="0" max="100" value="50">
+        <span id="volumenValor">50%</span>
     </div>
 
 </section>
@@ -35,8 +45,8 @@
 <section class="playlist">
     <h3 class="playlistTitle">Playlist</h3>
     <div class="buttons-order">
-        <button onclick="orderByTitle()"></button>
-        <button onclick="orderByArtista()"></button>
+        <button onclick="orderByTitle()">Por Título</button>
+        <button onclick="orderByArtista()">Por Artista</button>
     </div>
 
     <div id="playlistContainer">
@@ -64,7 +74,10 @@
         <input type="range" id="sliderAgudo" min="-10" max="10" value="0">
     </div>
 </section>
+</div> 
 
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

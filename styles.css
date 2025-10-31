@@ -1,0 +1,60 @@
+:root{
+    --bg: rgb(0, 0, 0);
+    --boxes: rgba(253, 251, 251, 0.144);
+    --border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: var(--bg);
+    color: white;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem;
+    height: 90vh;
+   
+}
+
+.reproductor{
+    grid-column: 1;
+    grid-row: 1/3;
+     background: var(--boxes);
+     border: var(--border);
+     border-radius: 1rem;
+}
+
+.playlist{
+    grid-column: 2;
+    grid-row: 1;
+      background: var(--boxes);
+     border: var(--border);
+      border-radius: 1rem;
+      backdrop-filter: blur(2rem);
+}
+
+.radio{
+    grid-column: 2;
+    grid-row: 2;
+     background: var(--boxes);
+     border: var(--border);
+      border-radius: 1rem;
+      backdrop-filter: blur(rem);
+}
+
+.equalizer{
+    grid-column: 3;
+    grid-row: 1/3;
+     background: var(--boxes);
+     border: var(--border);
+      border-radius: 1rem;
+      backdrop-filter: blur(2rem);
+}
+
